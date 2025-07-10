@@ -13,8 +13,50 @@ The deployment of low-power N-H in networked environments requires reliable, sec
 The training pipeline begins with building an ANN using TensorFlow 2.x, which will later be mapped to a spike-compatible format for neuromorphic inference. Because Akida board runs models using low-bitwidth integer arithmetic (4–8 bits), it is critical to align the training phase with these constraints to avoid significant post-training performance degradation.
 
 ## 4. Use case validation: Networked neuromorphic AI for distributed intelligence
+
 ### 4.1  Use Case: If multiple RPI5 nodes or remote clients need to receive the classification results in real-time, MQTT can be used to broadcast inference outputs
 
+# MQTT-Based Akida Inference Broadcasting
+
+This project demonstrates how to perform real-time classification broadcasting using BrainChip Akida on Raspberry Pi 5 with MQTT.
+
+## Project Structure
+
+mqtt-akida-inference/
+├── config/ # MQTT broker and topic configuration
+├── scripts/ # MQTT publisher/subscriber scripts
+├── sample_data/ # Sample input data for inference
+├── requirements.txt # Required Python packages
+
+## Usage
+
+1. **Install Mosquitto on RPI5**
+bash   
+sudo apt update
+sudo apt install mosquitto mosquitto-clients -y
+sudo systemctl enable mosquitto
+sudo systemctl start mosquitto
+
+3. **Run Publisher (on RPI5)**
+
+python3 scripts/mqtt_publisher.py
+
+3. **Run Subscriber (on remote device)**
+
+python3 scripts/mqtt_subscriber.py
+
+4. **Optional: Monitor from CLI**
+bash
+mosquitto_sub -h <BROKER_IP> -t "akida/inference" -v
+
+**Akida Compatibility**
+python3 outputs = model_akida.predict(sample_image)
+
+**Real-Time Edge AI**
+This use case supports event-based edge AI and real-time feedback in smart environments, such as surveillance, mobility, and robotics.
+
+**Configurations**
+Set your broker IP and topic in config/config.py
 
 ### 4.2 Use Case: If the Akida accelerator is deployed in an autonomous driving system, V2X communication allows other vehicles or infrastructure to receive AI alerts based on neuromorphic-based vision
 
@@ -23,12 +65,9 @@ This Use Cases simulates a lightweight V2X (Vehicle-to-Everything) communication
 ## Folder Structure
 ```
 .
-├── config
-│   └── config.py              # V2X settings
-├── transmitter
-│   └── v2x_transmitter.py     # Simulated Akida alert broadcaster
-├── receiver
-│   └── v2x_receiver.py        # Listens for incoming V2X alerts
+├── config.py # V2X settings
+├── v2x_transmitter.py # Simulated Akida alert broadcaster
+├── v2x_receiver.py # Listens for incoming V2X alerts
 └── README.md
 ```
 
