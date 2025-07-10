@@ -101,9 +101,6 @@ python3 transmitter/v2x_transmitter.py
 - UDP broadcast mode is used for simplicity
 - This is a prototype for real-time event-based message sharing between intelligent nodes
 
-## License
-MIT License
-
 
 ### 4.3 Use Case: If multiple RPI5-Akida nodes are deployed for federated learning, updates to neuromorphic models must be synchronized between devices
 
