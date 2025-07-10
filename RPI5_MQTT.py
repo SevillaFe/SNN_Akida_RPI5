@@ -47,3 +47,8 @@ print("Inference result sent:", inference_result)
 plt.imshow(sample_image.squeeze(), cmap=cm.Greys_r)
 plt.title(f"Class: {predicted_class} | Confidence: {confidence:.2f}")
 plt.show()
+
+
+### To use it previously, we ran an MQTT Broker on RPI5: MQTT_akida_runn
+
+
