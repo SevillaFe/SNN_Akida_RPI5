@@ -67,7 +67,7 @@ This Use Cases simulates a lightweight V2X (Vehicle-to-Everything) communication
 
 ## Folder Structure
 ```
-.
+V2X/
 ├── config.py # V2X settings
 ├── v2x_transmitter.py # Simulated Akida alert broadcaster
 ├── v2x_receiver.py # Listens for incoming V2X alerts
@@ -113,6 +113,7 @@ Neuromorphic models trained on individual RPI5-Akida nodes can contribute update
 ## Repository Structure
 
 ```
+federated_learning/
 ├── federated_learning_server.py       # Flask server to receive model weights
 ├── federated_learning_client.py       # Client script to upload Akida model weights
 ├── model_utils.py                     # (Optional) Placeholder for weight handling utilities
