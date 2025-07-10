@@ -21,21 +21,24 @@ The training pipeline begins with building an ANN using TensorFlow 2.x, which wi
 This project demonstrates how to perform real-time classification broadcasting using BrainChip Akida on Raspberry Pi 5 with MQTT.
 
 ## Project Structure
-
+```
 mqtt-akida-inference/
 ├── config/ # MQTT broker and topic configuration
 ├── scripts/ # MQTT publisher/subscriber scripts
 ├── sample_data/ # Sample input data for inference
 ├── requirements.txt # Required Python packages
+```
 
 ## Usage
 
 1. **Install Mosquitto on RPI5**
-bash   
+
+```bash   
 sudo apt update
 sudo apt install mosquitto mosquitto-clients -y
 sudo systemctl enable mosquitto
 sudo systemctl start mosquitto
+```
 
 3. **Run Publisher (on RPI5)**
 
