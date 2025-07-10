@@ -41,19 +41,24 @@ sudo systemctl start mosquitto
 ```
 
 3. **Run Publisher (on RPI5)**
-
+```
 python3 scripts/mqtt_publisher.py
+```
 
 3. **Run Subscriber (on remote device)**
-
+```
 python3 scripts/mqtt_subscriber.py
+```
 
 4. **Optional: Monitor from CLI**
-bash
+```bash
 mosquitto_sub -h <BROKER_IP> -t "akida/inference" -v
+```
 
 **Akida Compatibility**
+```
 python3 outputs = model_akida.predict(sample_image)
+```
 
 **Real-Time Edge AI**
 This use case supports event-based edge AI and real-time feedback in smart environments, such as surveillance, mobility, and robotics.
