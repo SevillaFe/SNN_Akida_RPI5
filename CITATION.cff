@@ -1,0 +1,49 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Eco-Efficient Deployment of Spiking Neural Networks on
+  Low-Cost Edge Hardware
+message: >-
+  Practical and energy-aware framework for deploying Spiking
+  Neural Networks on low-cost hardware for edge computing
+type: software
+authors:
+  - given-names: Fernando
+    family-names: Sevilla Martinez
+    email: fsevillama@uoc.edu
+    affiliation: >-
+      e-Health Center, Universitat Oberta de Catalunya
+      (UOC), Barcelona, Spain
+    orcid: 'https://orcid.org/0000-0002-0617-3303'
+identifiers:
+  - type: url
+    value: 'https://github.com/SevillaFe/SNN_Akida_RPI5'
+    description: Repository SNN_Akida_RPI5
+repository-code: 'https://github.com/SevillaFe/SNN_Akida_RPI5'
+abstract: >-
+  This Repo presents a practical and energy-aware framework
+  for deploying Spiking Neural Networks on low-cost hardware
+  for edge computing. We detail a reproducible pipeline that
+  integrates neuromorphic processing with secure remote
+  access and distributed intelligence. Using Raspberry Pi
+  and the BrainChip Akida PCIe accelerator, we demonstrate a
+  lightweight deployment process including model training,
+  quantization, and conversion. Our experiments validate the
+  eco-efficiency and networking potential of neuromorphic AI
+  systems, providing key insights for sustainable
+  distributed intelligence. This letter offers a blueprint
+  for scalable and secure neuromorphic deployments across
+  edge networks.
+keywords:
+  - Neuromorphic Computing
+  - Spiking Neural Networks
+  - Edge Computing
+  - Low-Power AI
+  - Edge Processing
+  - SSH
+  - V2X
+  - MQTT
+  - Federated learning
+license: Apache-2.0
